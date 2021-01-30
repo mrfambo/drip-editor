@@ -17,15 +17,9 @@
   ],
   "types": "dist/index.d.ts",
   "scripts": {
-    "dev:package": "NODE_ENV=development BABEL_ENV=development run-p build:watch",
     "build": "rimraf dist && NODE_ENV=production BABEL_ENV=production rollup -c",
     "build:watch": "rollup -c -w",
-    "test": "jest",
-    "test:coverage": "jest --coverage --forceExit --colors",
-    "lint": "esw --ext .jsx --ext .js --color",
-    "lint:fix": "npm run lint --fix",
     "prepare": "npm run build",
-    "prerelease": "npm run lint:fix && npm run test:coverage && npm run build",
     "release": "npm publish"
   },
   "peerDependencies": {
