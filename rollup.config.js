@@ -46,6 +46,7 @@ export default {
         '*.test.{js+(|x), ts+(|x)}',
         '**/*.test.{js+(|x), ts+(|x)}',
         'pages',
+        'public',
       ],
     }),
     babel({
