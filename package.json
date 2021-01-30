@@ -23,6 +23,7 @@
     "start": "next start",
     "build:pkg": "rimraf dist && NODE_ENV=production BABEL_ENV=production rollup -c",
     "export:web": "next export",
+    "build:test": "npm run build && npm run build:pkg",
     "test": "jest"
   },
   "dependencies": {},
