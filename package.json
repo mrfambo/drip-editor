@@ -17,12 +17,8 @@
   ],
   "types": "dist/index.d.ts",
   "scripts": {
-    "dev:next": "next -p 3008",
     "dev:package": "NODE_ENV=development BABEL_ENV=development run-p build:watch",
     "build": "rimraf dist && NODE_ENV=production BABEL_ENV=production rollup -c",
-    "build:next": "next build",
-    "export:next": "next export",
-    "make:web": "yarn run build:next && yarn run export:next",
     "build:watch": "rollup -c -w",
     "test": "jest",
     "test:coverage": "jest --coverage --forceExit --colors",

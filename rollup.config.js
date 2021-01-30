@@ -35,7 +35,6 @@ export default {
       includeDependencies: true,
     }),
     typescript({
-      tsconfig: './tsconfig.prod.json',
       typescript: require('typescript'),
       include: ['*.js+(|x)', '**/*.js+(|x)'],
       exclude: [
