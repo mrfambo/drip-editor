@@ -41,10 +41,11 @@
     "noEmit": true
   },
   "include": [
-    "src/**/*", "pages/**/*"
+    "src/**/*"
   ],
   "exclude": [
     "coverage",
+    "website",
     "config",
     "dist",
     "node_modules/**",
