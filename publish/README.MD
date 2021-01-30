@@ -1,1 +1,0 @@
-Keeping it separate because NextJS is getting messed up when we try to install our own babel and stuff

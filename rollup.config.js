@@ -12,7 +12,7 @@ import { terser } from 'rollup-plugin-terser'
 import pkg from './package.json'
 
 export default {
-  input: '../src/index.ts',
+  input: './src/index.ts',
   output: [
     {
       file: pkg.module,
@@ -35,6 +35,7 @@ export default {
       includeDependencies: true,
     }),
     typescript({
+      tsconfig: './rollup.tsconfig.json',
       typescript: require('typescript'),
       include: ['*.js+(|x)', '**/*.js+(|x)'],
       exclude: [
@@ -45,9 +46,11 @@ export default {
         '*.test.{js+(|x), ts+(|x)}',
         '**/*.test.{js+(|x), ts+(|x)}',
         'public',
+        'pages',
       ],
     }),
     babel({
+      configFile: './config/babel.config.json',
       presets: [
         'react-app',
       ],
