@@ -24,8 +24,7 @@
     "build:pkg": "rimraf dist && NODE_ENV=production BABEL_ENV=production rollup -c",
     "export:web": "next export",
     "lint": "esw --ext .jsx --ext .js --ext .ts --ext .tsx --color",
-    "test": "jest",
-    "prepare": "npm run lint && npm run test"
+    "test": "jest"
   },
   "husky": {
     "hooks": {
