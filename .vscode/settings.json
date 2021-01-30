@@ -1,0 +1,11 @@
+{
+    "files.associations": {
+        "*.js": "javascript"
+    },
+    "editor.insertSpaces": true,
+    "editor.detectIndentation": false,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    },
+    "VSCodeCounter.history": 20
+}
