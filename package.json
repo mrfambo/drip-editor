@@ -16,7 +16,6 @@
     "dist"
   ],
   "types": "dist/index.d.ts",
-  "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
