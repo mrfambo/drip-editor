@@ -12,7 +12,7 @@ import { terser } from 'rollup-plugin-terser'
 import pkg from './package.json'
 
 export default {
-  input: 'src/index.ts',
+  input: 'website/src/index.ts',
   output: [
     {
       file: pkg.module,
@@ -39,7 +39,6 @@ export default {
       include: ['*.js+(|x)', '**/*.js+(|x)'],
       exclude: [
         'coverage',
-        'website',
         'config',
         'dist',
         'node_modules/**',
@@ -64,7 +63,7 @@ export default {
         '@babel/plugin-proposal-class-properties',
         'transform-react-remove-prop-types',
       ],
-      exclude: ['node_modules/**', 'website/**'],
+      exclude: ['node_modules/**'],
       babelHelpers: 'runtime',
     }),
     url(),

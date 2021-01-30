@@ -1,15 +1,13 @@
 import React, { ReactElement } from 'react'
-import { Editor } from '../../src/components/Editor'
+import { Editor } from '../src/components/Editor'
 
-interface Props {
-    
-}
+interface Props {}
 
 export default function Home({}: Props): ReactElement {
-    return (
-        <div>
-            <h1>Testing Website</h1>
-            <Editor />
-        </div>
-    )
+  return (
+    <div>
+      <h1>Testing Website</h1>
+      <Editor />
+    </div>
+  )
 }
