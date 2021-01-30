@@ -7,7 +7,7 @@
     "outDir": "./dist",
     "target": "es5",
     "moduleResolution": "node",
-    "baseUrl": "../src",
+    "baseUrl": "./src",
     "lib": [
       "dom",
       "dom.iterable",
@@ -41,7 +41,7 @@
     "noEmit": true
   },
   "include": [
-    "../src/**/*"
+    "./src/**/*"
   ],
   "exclude": [
     "coverage",
@@ -49,6 +49,7 @@
     "dist",
     "node_modules/**",
     "src/components/**/*.test.js",
-    "src/components/**/*.test.ts"
+    "src/components/**/*.test.ts",
+    "pages"
   ]
 }

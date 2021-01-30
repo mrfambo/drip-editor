@@ -23,6 +23,8 @@ yarn-error.log*
 default.config
 rollup.config.js
 tsconfig.json
+next-env.d.ts
+rollup.tsconfig.json
 
 docker*
 Docker*
@@ -33,9 +35,10 @@ demo
 public
 src
 scripts
-styleguide*
-website
-website*
+out
+pages
+public
+
 
 
 
