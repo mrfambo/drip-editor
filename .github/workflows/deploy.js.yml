@@ -1,23 +1,26 @@
 # Workflow for deployment
 
-name: Ship to npm
+name: Release npm package
 
 on:
   push:
-    branches: [ main ]
+    branches:
+      - master
 
 jobs:
-  publish:
+  release:
+    name: Release
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@master
       - uses: actions/setup-node@v1
         with:
-          node-version: 10
+          node-version: "12.x"
       - run: npm ci
-      - run: npm run lint
-      - run: npm run test
-      - run: npm run build:pkg
-      - uses: JS-DevTools/npm-publish@v1
-        with:
-          token: ${{ secrets.NPM_TOKEN }}
+      - run: npm lint
+      - run: npm test
+      - run: npm run build:pkg      
+      - run: npx semantic-release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
